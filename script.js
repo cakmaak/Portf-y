@@ -6,7 +6,7 @@ function handleContactSubmit(event) {
   const email = formData.get('email');
   const message = formData.get('message');
 
-  const mailto = `mailto:ornek@mail.com?subject=${encodeURIComponent('Portfolyö İletişim: ' + name)}&body=${encodeURIComponent(`Ad Soyad: ${name}\nE-posta: ${email}\n\n${message}`)}`;
+  const mailto = `mailto:yusuf612844@gmail.com?subject=${encodeURIComponent('Portfolyö İletişim: ' + name)}&body=${encodeURIComponent(`Ad Soyad: ${name}\nE-posta: ${email}\n\n${message}`)}`;
   window.location.href = mailto;
   return false;
 }
