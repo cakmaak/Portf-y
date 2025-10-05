@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolyö — Projelerim</title>
+    <meta name="description" content="Kişisel portfolyö ve projeler" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="logo" href="#">Yusuf</a>
+        <nav class="menu">
+          <a href="#projeler">Projeler</a>
+          <a href="#hakkimda">Hakkımda</a>
+          <a href="#iletisim">İletişim</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO / LANDING -->
+      <section class="hero container" id="ana">
+        <div class="hero-text">
+          <h1>Merhaba, ben Yusuf Ziya </h1>
+          <p class="lead">
+            
+        Spring Boot ile backend odaklı, güvenilir ve işlevsel uygulamalar geliştiriyorum.
+        Aşağıda kısa bir tanıtım ve örnek proje videosu bulabilirsiniz. Daha fazla detay için sayfayı kaydırabilirsiniz.
+          </p>
+        </div>
+        <div class="hero-media">
+          <iframe
+            class="hero-iframe"
+            src="https://www.youtube.com/embed/LSEYdU8Dp9Y?autoplay=1&mute=1&rel=0&modestbranding=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <p class="video-caption">Açıklamanın altındaki tanıtım videosu</p>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="section container" id="projeler">
+        <div class="section-head">
+          <h2>Projeler</h2>
+          <p>Seçili çalışmalarım</p>
+        </div>
+        <div class="projects-grid">
+          <article class="card" data-title="Proje 1" data-desc="Hospital Appointment System - Backend / Hastane Randevu Sistemi - Backend
+
+          Bu proje, hastane randevu yönetimi için geliştirilmiş bir Spring Boot backend uygulamasıdır. Kullanıcıların kolayca randevu oluşturabilmesi, iptal edebilmesi; adminlerin ise randevuları onaylayıp reddedebilmesi için tasarlanmıştır. Güvenlik, JWT tabanlı kimlik doğrulama ve rol tabanlı erişim kontrolüyle sağlanmaktadır.
+          
+          🔹 Özellikler / Features
+          
+          Kullanıcılar (Users):
+          
+          Kayıt olma ve giriş yapma (Register and login)
+          Randevu alma ve iptal etme (sadece kendi randevuları) (Book and cancel own appointments)
+          Randevu iptali için son tarih kontrolü (1 gün öncesine kadar) (Cancellation allowed until 1 day before)
+          
+          Admin:
+          
+          Randevuları onaylama veya reddetme (Approve or reject appointments)
+          Yeni poliklinik veya doktor ekleme (Add new clinics or doctors)
+          
+          Güvenlik (Security):
+          
+          JWT ile kullanıcı doğrulama (JWT-based authentication)
+          Role tabanlı erişim kontrolü (ADMIN, USER) (Role-based access control)
+          
+          Veritabanı (Database - PostgreSQL):
+          
+          Randevu, kullanıcı, poliklinik ve doktor tabloları (Appointment, user, clinic, doctor tables)
+          Enum tabanlı randevu durumu (ONAYLANDI, BEKLEMEDE, REDDEDİLDİ) (Enum-based appointment status)
+          
+          🔹 Teknolojiler / Technologies
+          
+          Java 17
+          Spring Boot 3
+          Spring Security & JWT
+          Spring Data JPA
+          PostgreSQL
+          Maven
+          
+          Bu sistem, hastanelerde randevu süreçlerini dijitalleştirmeyi ve kullanıcı deneyimini kolaylaştırmayı hedeflemektedir." data-yt="https://www.youtube.com/embed/986CG563BvI" data-poster="assets/poster.jpg">
+            <img src="https://res.cloudinary.com/diyibvvua/image/upload/v1759656885/A_clean_and_elegant_cover_image_for_a_hospital_appointment_system_admin_panel_The_design_should_prominently_display_the_text_Appointment_System_at_the_top_Include_a_well_organized_dashboard_layout_featuring_sectio_ve55ui.jpg" alt="Proje 1 görseli" />
+            <div class="card-body">
+              <h3>Hospital Appointment System</h3>
+              <p>Spring Boot tabanlı bir hastane randevu yönetim sistemi. Kullanıcılar randevu alıp iptal edebilir, adminler randevuları onaylayıp reddedebilir. Güvenlik JWT ile sağlanmıştır.</p>
+              <div class="card-actions">
+                <button class="btn inspect-btn" type="button">İncele</button>
+                <a class="btn btn-ghost" href="https://github.com/cakmaak/HospitalAppointmentSystem-Backend" target="_blank" rel="noopener">Kod</a>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-title="Proje 2" data-desc="
+
+          Note Summary AI API – Backend / Not Özetleme Yapay Zeka API’si – Backend
+          
+          Bu proje, kullanıcıların notlarını yönetmesini ve yapay zekâ desteğiyle özetletebilmesini sağlayan bir Spring Boot backend uygulamasıdır.
+          JWT tabanlı güvenlik sayesinde kullanıcı kimlik doğrulaması yapılır ve iki farklı rol sistemi vardır:
+          
+          Admin: Tüm kullanıcıların notlarını görüntüleyebilir, yönetebilir.
+          
+          Agent (Normal Kullanıcı): Yalnızca kendi oluşturduğu notları görebilir, silebilir veya özetleme talebi yapabilir.
+          
+          Ana Özellikler (Core Features):
+          
+          Kullanıcı Yönetimi (User Management):
+          
+          Kayıt olma, giriş yapma
+          
+          JWT token ile kimlik doğrulama
+          
+          Role-based access control (ADMIN / AGENT)
+          
+          Not Yönetimi (Notes):
+          
+          Yeni not ekleme
+          
+          Notları görüntüleme (admin: tüm notları, agent: sadece kendi notlarını)
+          
+          Not durumlarını takip etme: QUEUED, PROCESSING, DONE, FAILED
+          
+          Yapay zekâ ile not özetleme (asenkron işleme mantığıyla çalışır)
+          
+          Güvenlik (Security):
+          
+          JWT tabanlı authentication
+          
+          Roller bazlı erişim kontrolü
+          
+          Dokümantasyon:
+          
+          Swagger UI ile tüm endpointler kolayca test edilebilir.
+          
+          Kullanılan Teknolojiler (Technologies):
+          
+          Java 17
+          
+          Spring Boot
+          
+          Spring Security (JWT)
+          
+          Spring Data JPA + PostgreSQL
+          
+           Swagger (OpenAPI)" data-yt="https://www.youtube.com/embed/iYjDy3sXEYI" data-poster="assets/poster.jpg">
+            <img src="https://res.cloudinary.com/diyibvvua/image/upload/v1759657916/A_visually_appealing_cover_image_for_a_note_summary_AI_project_The_design_should_feature_a_clean_and_modern_digital_interface_displaying_summarized_notes_key_points_and_bullet_lists_in_a_user_friendly_layout_Use_a_ytnpie.jpg" alt="Proje 2 görseli" />
+            <div class="card-body">
+              <h3>Note Summary AI</h3>
+              <p>Spring Boot + JWT tabanlı bir REST API’dir. Kullanıcılar not ekleyebilir, notlarını yapay zeka ile özetletebilir ve süreci takip edebilir.</p>
+              <div class="card-actions">
+                <button class="btn inspect-btn" type="button">İncele</button>
+                <a class="btn btn-ghost" href="https://github.com/cakmaak/Notes-summary-Ai-api" target="_blank" rel="noopener">Kod</a>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-title="Proje 3" data-desc="Bu proje, işletmelerin stok hareketlerini etkin bir şekilde takip edebilmesi için geliştirilmiş Spring Boot tabanlı bir backend uygulamasıdır. Kullanıcılar stok ekleyebilir, güncelleyebilir ve silebilir; ancak her kullanıcı sadece kendi stok kayıtlarını yönetebilir. JWT tabanlı güvenlik ve rol bazlı erişim kontrolü sayesinde sistem hem güvenli hem de ölçeklenebilir bir yapıya sahiptir.
+
+          Power BI entegrasyonu ile API üzerinden canlı veri analizi ve görselleştirme sağlanır; yalnızca görseller gösterilir ve hassas veriler korunur. Sistem, işletmeler için stok takibi ve raporlama odaklı olarak tasarlanmış olup, dinamik ve esnek kullanım sunar.
+          
+          Öne çıkan özellikler:
+          
+          Stok yönetimi: ekleme, güncelleme, silme
+          
+          Kullanıcı bazlı yetki kontrolü
+          
+          JWT ile güvenli erişim
+          
+          Power BI entegrasyonu ile canlı görselleştirme
+          
+          API ve veritabanı ile esnek ve ölçeklenebilir yapı" data-yt="https://www.youtube.com/embed/m6lpONQL5qs" data-poster="assets/poster.jpg">
+            <img src="https://res.cloudinary.com/diyibvvua/image/upload/v1759658658/A_modern_and_sleek_cover_image_for_a_stock_management_project_featuring_a_digital_interface_The_design_should_include_stock_levels_inventory_lists_and_management_tools_in_an_organized_layout_Use_a_professional_col_udayqb.jpg" alt="Proje 3 görseli" />
+            <div class="card-body">
+              <h3>Stock Management System</h3>
+              <p>Bir işletme için geliştirdiğim Dinamik ve güvenli bir stok yönetim sistemi. Kullanıcılar stok ekleyip güncelleyebilir, yalnızca kendi kayıtlarını yönetebilir. Power BI entegrasyonu ile canlı veri görselleştirme yapılır.</p>
+              <div class="card-actions">
+                <button class="btn inspect-btn" type="button">İncele</button>
+                <a class="btn btn-ghost" href="https://github.com/cakmaak/Backend-for-stockmanagement" target="_blank" rel="noopener">Kod</a>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-title="" data-desc="ClockShopping, saat satışı üzerine kurulmuş Spring Boot tabanlı bir e-ticaret web uygulamasıdır. Kullanıcılar ürünleri listeleyip detaylarını görüntüleyebilir, alışveriş sepeti oluşturabilir, ürün ekleyip çıkarabilir ve siparişlerini takip edebilir. Her kullanıcı yalnızca kendi sepet ve siparişlerini yönetebilir; yönetici rolleri ise ürün ekleme ve güncelleme gibi işlemleri gerçekleştirebilir.
+
+          Sistem JWT tabanlı güvenlik ve rol bazlı erişim kontrolü sayesinde güvenli ve ölçeklenebilir bir yapıya sahiptir. Ürün yönetimi, kategori ve filtreleme seçenekleri ile kullanıcı deneyimi odaklı tasarlanmıştır. API ve frontend entegrasyonu ile esnek kullanım imkânı sağlar ve e-ticaret operasyonlarını kolaylaştırır.
+          
+          Öne çıkan özellikler:
+          
+          Ürün yönetimi: listeleme, detay görüntüleme, stok kontrolü, kategori ve filtreleme
+          
+          Alışveriş sepeti: ekleme, çıkarma, güncelleme, toplam tutar hesaplama
+          
+          Sipariş ve ödeme yönetimi: sipariş oluşturma, takibi ve kullanıcı bazlı geçmiş
+          
+          JWT tabanlı güvenlik ve rol bazlı erişim kontrolü
+          
+          Dinamik ve kullanıcı odaklı e-ticaret deneyimi" data-yt="https://www.youtube.com/embed/SquRwY_G3KI" data-poster="assets/poster.jpg">
+            <img src="https://res.cloudinary.com/diyibvvua/image/upload/v1759659223/A_modern_and_elegant_cover_image_for_a_clock_shopping_e_commerce_website_featuring_a_variety_of_wristwatches_and_wall_clocks_The_design_should_have_a_distinctly_vibrant_blue_color_palette_creating_a_sophisticated__mxd2st.jpg" alt="Proje 4 görseli" />
+            <div class="card-body">
+              <h3>Clock shopping e-commerce website</h3>
+              <p>Tam özellikli bir saat satış e-ticaret uygulaması. Kullanıcılar ürünleri görüntüleyebilir, sepet oluşturabilir, sipariş verebilir ve ödeme yapabilir. JWT tabanlı güvenlik ile kullanıcı işlemleri güvenli bir şekilde yönetilir.</p>
+              <div class="card-actions">
+                <button class="btn inspect-btn" type="button">İncele</button>
+                <a class="btn btn-ghost" href="https://github.com/cakmaak/Backend-for-Clock-shopping-website" target="_blank" rel="noopener">Kod</a>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-title="Proje 5" data-desc="Bu proje, React kullanılarak geliştirilmiş bir döviz çevirici uygulamasıdır. Kullanıcılar, bir para biriminde girilen miktarı anında başka bir para birimine çevirebilir ve farklı para birimleri arasında hızlı ve kolay dönüşümler gerçekleştirebilir. Uygulama, Free Currency API üzerinden gerçek zamanlı döviz kurları ile entegre edilmiştir, böylece hesaplamalar her zaman güncel değerler üzerinden yapılır." data-yt="https://www.youtube.com/embed/3NmAMQgdFTU" data-poster="assets/poster.jpg">
+            <img src="https://res.cloudinary.com/diyibvvua/image/upload/v1759659834/A_modern_and_visually_appealing_currency_converter_interface_for_a_website_or_app_The_design_should_feature_a_clean_layout_with_input_fields_for_different_currencies_a_dropdown_menu_for_selecting_currency_types_an_wkjpxm.jpg" alt="Proje 5 görseli" />
+            <div class="card-body">
+              <h3>Güncel Kur Çevirici</h3>
+              <p>React tabanlı basit bir döviz çevirici. Kullanıcılar bir para biriminde miktar girip anında diğer birime çevrilmiş değerini görebilir. Gerçek zamanlı hesaplamalar ve çoklu para birimi desteği sunar.</p>
+              <div class="card-actions">
+                <button class="btn inspect-btn" type="button">İncele</button>
+                <a class="btn btn-ghost" href="https://github.com/cakmaak/Currency-converter" target="_blank" rel="noopener">Kod</a>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-title="Proje 6" data-desc="Yakında Yayında" data-video="assets/sample.mp4" data-poster="assets/poster.jpg">
+            <img src="https://res.cloudinary.com/diyibvvua/image/upload/v1759660163/A_vibrant_and_engaging_marketplace_interface_for_a_university_student_platform_named_UniBazaar_specifically_designed_for_Istanbul_Technical_University_The_design_should_feature_a_prominent_listing_for_a_textbook_t_kno9do.jpg" alt="Proje 6 görseli" />
+            <div class="card-body">
+              <h3>UniBazaar</h3>
+              <p>Çok Yakında :))</p>
+              <div class="card-actions">
+                <button class="btn inspect-btn" type="button">İncele</button>
+                <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">Kod</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section section-alt" id="hakkimda">
+        <div class="container about">
+          <div class="about-text">
+            <h2>Hakkımda</h2>
+            <p>
+                Sivas Cumhuriyet Üniversitesi Bilgisayar Mühendisliği mezunuyum.
+                Backend geliştirmede Java (Spring Boot), frontend geliştirmede
+                React ile etkin şekilde projeler geliştiriyorum. Ayrıca Python ve
+                JavaScript dillerine hâkimim.Power BI veri görselleştirme sertifikasına sahibim.
+            </p>
+            <ul class="pill-list">
+              <li>JAVA / Spring Boot</li>
+              <li>React</li>
+              <li>Python</li>
+              <li>PHP / LARAVEL</li>
+              <li>Power BI</li>
+            </ul>
+          </div>
+          <img class="about-photo" src="https://res.cloudinary.com/diyibvvua/image/upload/v1759656204/me_ivaodn.jpg" alt="Profil"  />
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section container" id="iletisim">
+        <div class="section-head">
+          <h2>İletişim</h2>
+          <p>Proje veya iş birlikleri için yazabilirsiniz</p>
+        </div>
+        <form class="contact-form" onsubmit="return handleContactSubmit(event)">
+          <div class="grid-2">
+            <label>
+              <span>Ad Soyad</span>
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              <span>E-posta</span>
+              <input type="email" name="email" required />
+            </label>
+          </div>
+          <label>
+            <span>Mesaj</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <div class="form-actions">
+            <button class="btn" type="submit">Gönder</button>
+            <a class="btn btn-ghost" href="mailto:ornek@mail.com">E-postayla gönder</a>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- MODAL -->
+    <div class="modal" id="project-modal" aria-hidden="true" role="dialog" aria-labelledby="project-modal-title">
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-dialog" role="document">
+        <button class="modal-close" type="button" aria-label="Kapat" data-close-modal>✕</button>
+        <div class="modal-content">
+          <h3 id="project-modal-title">Proje Başlığı</h3>
+          <p id="project-modal-desc" class="modal-desc">Açıklama</p>
+          <div id="project-modal-media">
+            <video id="project-modal-video" class="modal-video" controls playsinline poster="">
+              <source id="project-modal-video-source" src="" type="video/mp4" />
+              
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container footer">
+        <p>© <span id="year"></span> Yusuf. Tüm hakları saklıdır.</p>
+        <div class="social">
+          <a href="https://github.com/cakmaak" target="_blank" aria-label="GitHub">GitHub</a>
+          <a href="https://www.linkedin.com/in/yusuf-ziya-%C3%A7akmak-396058269/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+          
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
+
