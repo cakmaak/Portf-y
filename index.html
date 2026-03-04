@@ -53,6 +53,39 @@
           <p>Seçili çalışmalarım</p>
         </div>
         <div class="projects-grid">
+          <article class="card" data-title="E-ticaret Platformu" data-desc="
+Production seviyesinde uçtan uca geliştirdiğim e-ticaret sistemi. Bu proje, klima satışı yapan bir firma için tasarlandı ve yüksek tutarlı ürünler ile stok hassasiyeti gerektiriyordu. 
+
+🔹 Öne çıkan özellikler:
+- Transaction management & concurrency kontrol
+- Stok rezervasyonu ve timeout mekanizması (30 sn içinde ödeme gelmezse iptal)
+- JWT token authentication & rol bazlı erişim kontrolü (USER / ADMIN)
+- Halkbank ödeme sistemi entegrasyonu (Purchase Link)
+- Global exception handling (BusinessException, ValidationException, AccessDenied, Fallback)
+- Ödeme lifecycle loglama ve audit: hashlenmiş, DB’ye kaydedilen detaylı loglar (IP, User-Agent, PaymentEvent enum)
+- Power BI entegrasyonu ile gerçek zamanlı stok ve satış analizi
+- CI/CD pipeline: GitHub push → otomatik build & deploy
+- Production deployment: DigitalOcean VPS + SSL + reverse proxy
+
+🔹 Teknolojiler:
+- Java 17, Spring Boot 3, Spring Security
+- PostgreSQL, Spring Data JPA
+- React (frontend)
+- Power BI
+- Vercel (frontend deployment)
+" data-yt="" data-poster="">
+  <img src="https://res.cloudinary.com/diyibvvua/image/upload/v1772623025/xx_ahqhd1.png" alt="E-ticaret Platformu görseli" />
+  <div class="card-body">
+    <h3>E-ticaret Platformu</h3>
+    <p>Uçtan uca production seviyesinde bir e-ticaret sistemi. Stok yönetimi, ödeme entegrasyonu, rol bazlı erişim ve audit loglama ile güvenli ve ölçeklenebilir bir yapı sunar.</p>
+    <div class="card-actions">
+      <button class="btn inspect-btn" type="button">İncele</button>
+      <a class="btn btn-ghost" href="https://github.com/cakmaak/Alizone" target="_blank" rel="noopener">Kod</a>
+      <a class="btn btn-ghost" href="https://alizoneklima.com" target="_blank" rel="noopener">CANLI</a>
+      
+    </div>
+  </div>
+</article>
           <article class="card" data-title="Proje 1" data-desc="Hospital Appointment System - Backend / Hastane Randevu Sistemi - Backend
 
           Bu proje, hastane randevu yönetimi için geliştirilmiş bir Spring Boot backend uygulamasıdır. Kullanıcıların kolayca randevu oluşturabilmesi, iptal edebilmesi; adminlerin ise randevuları onaylayıp reddedebilmesi için tasarlanmıştır. Güvenlik, JWT tabanlı kimlik doğrulama ve rol tabanlı erişim kontrolüyle sağlanmaktadır.
