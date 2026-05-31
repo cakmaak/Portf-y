@@ -86,6 +86,85 @@ Production seviyesinde uçtan uca geliştirdiğim e-ticaret sistemi. Bu proje, k
     </div>
   </div>
 </article>
+          <article class="card" data-title="AI Destekli Güvenlik ve Alarm Sistemi" data-desc="
+Bu proje, gerçek zamanlı görüntü analizi ve olay tabanlı mimari kullanılarak geliştirilmiş yapay zeka destekli bir güvenlik sistemidir.
+
+🔹 Yapay Zeka Katmanı
+
+- YOLOv8 modeli üzerinde fine-tuning yapıldı
+- İnsan ve kedi sınıfları için özel Object Detection modeli geliştirildi
+- Python ve OpenCV ile canlı kamera görüntüsü analiz edildi
+- %78 üzeri confidence skoruna sahip person tespitleri işleme alındı
+- Precision, Recall ve Confidence optimizasyonları gerçekleştirildi
+
+🔹 Event-Driven Mimari (Kafka)
+
+- AI servisi Kafka Producer olarak çalışır
+- Spring Boot backend Kafka Consumer olarak eventleri işler
+- AI ve backend tamamen ayrık yapıdadır
+- Asenkron ve ölçeklenebilir mimari sunar
+
+🔹 Akıllı Alarm Sistemi
+
+- Belirli saat aralıklarında aktif çalışma
+- Person tespitinde görüntü yakalama
+- E-posta bildirimi gönderme
+- Alarm kayıtlarının oluşturulması
+
+🔹 Gerçek Zamanlı Dashboard
+
+- React + WebSocket kullanılarak geliştirildi
+- Kafka eventleri anlık olarak kullanıcı arayüzüne aktarılır
+- Alarm geçmişi ve canlı bildirim desteği
+
+🔹 Containerization
+
+- Docker ile tüm servisler containerize edildi
+- AI Service (YOLOv8 + OpenCV)
+- Kafka + Zookeeper
+- Spring Boot Backend
+- React Frontend
+
+🔹 Kullanılan Teknolojiler
+
+YOLOv8, Python, OpenCV, Apache Kafka, Spring Boot, WebSocket, React, Docker, Git, GitHub
+
+Bu proje sayesinde Computer Vision, Event-Driven Architecture, Real-Time Processing ve Containerization alanlarında uçtan uca sistem geliştirme deneyimi kazandım.
+"
+data-yt="https://www.youtube.com/embed/VIDEO_ID"
+data-poster="assets/poster.jpg">
+
+<img src="https://res.cloudinary.com/diyibvvua/image/upload/v1780229071/ben_xgj8qi.png"
+alt="AI Güvenlik Sistemi" />
+
+<div class="card-body">
+  <h3>AI Security & Alarm System</h3>
+  <p>
+    YOLOv8, Kafka ve Spring Boot kullanılarak geliştirilen gerçek zamanlı
+    güvenlik sistemi. İnsan tespiti yaparak alarm üretir, e-posta gönderir
+    ve canlı dashboard üzerinden olayları anlık yayınlar.
+  </p>
+
+  <div class="card-actions">
+    <button class="btn inspect-btn" type="button">İncele</button>
+
+    <a class="btn btn-ghost"
+       href="https://github.com/cakmaak/YoloV8Backend"
+       target="_blank"
+       rel="noopener">Backend</a>
+
+    <a class="btn btn-ghost"
+       href="https://github.com/cakmaak/human-cat-model-YoloV8"
+       target="_blank"
+       rel="noopener">AI</a>
+
+    <a class="btn btn-ghost"
+       href="https://github.com/cakmaak/YOLO-V8-REACT"
+       target="_blank"
+       rel="noopener">Frontend</a>
+  </div>
+</div>
+</article>
           <article class="card" data-title="Bird vs Drone Classification System" data-desc="
 Bird vs Drone Classification System
 
